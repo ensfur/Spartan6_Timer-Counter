@@ -1,8 +1,8 @@
 // Switches
-NET "switch[0]" LOC = "C3";	// button 1 pull up
-NET "switch[1]" LOC = "D3";	// button 2 pull up
-#NET "switch[2]" LOC = "E4";	// button 3 pull up
-#NET "reset"     LOC = "E3";	// button 4 pull up
+NET "switch[0]"   LOC = "C3";	// button 1 pull up
+NET "switch[1]"   LOC = "D3";	// button 2 pull up
+#NET "switch[2]"  LOC = "E4";	// button 3 pull up
+#NET "switch[3]"  LOC = "E3";	// button 4 pull up
 
 // LEDS
 NET "led[0]" LOC = "P4";		// led 0
