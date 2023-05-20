@@ -38,9 +38,9 @@ generic (
 );
 
 port (
-	clk			: in std_logic;
+	clk		: in std_logic;
 	switch		: in std_logic_vector (1 downto 0);
-	led			: out std_logic_vector (3 downto 0)
+	led		: out std_logic_vector (3 downto 0)
 );
 end top;
 
@@ -51,17 +51,17 @@ constant c_timer1seclim		: integer := c_clkfreq;
 constant c_timer500mslim	: integer := c_clkfreq/2;
 constant c_timer250mslim	: integer := c_clkfreq/4;
 
-signal timer					: integer range 0 to c_timer2seclim := 0;
-signal timerlim				: integer range 0 to c_timer2seclim	:= 0;
-signal counter_int			: std_logic_vector (3 downto 0) := (others => '0');
+signal timer			: integer range 0 to c_timer2seclim := 0;
+signal timerlim			: integer range 0 to c_timer2seclim	:= 0;
+signal counter_int		: std_logic_vector (3 downto 0) := (others => '0');
 
 begin
 
 -- combination logis assignment
 timerlim	<= c_timer2seclim 	when switch = "11" else
-				c_timer1seclim		when switch = "10" else
-				c_timer500mslim	when switch = "01" else
-				c_timer250mslim;
+		   c_timer1seclim	when switch = "10" else
+		   c_timer500mslim	when switch = "01" else
+		   c_timer250mslim;
 
 
 process (clk) begin
