@@ -1,0 +1,15 @@
+// Switches
+NET "switch[0]" LOC = "C3";	// button 1 pull up
+NET "switch[1]" LOC = "D3";	// button 2 pull up
+#NET "switch[2]" LOC = "E4";	// button 3 pull up
+#NET "reset"     LOC = "E3";	// button 4 pull up
+
+// LEDS
+NET "led[0]" LOC = "P4";		// led 0
+NET "led[1]" LOC = "N5";		// led 1
+NET "led[2]" LOC = "P5";		// led 2
+NET "led[3]" LOC = "M6";		// led 3
+
+// Clock
+
+NET "clk" LOC = "T8";		// clock 
